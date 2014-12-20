@@ -1,0 +1,99 @@
+@media only screen and (max-width:500px) {
+	p {
+		display:none;
+	}
+	body{
+		background-color: pink;
+	}
+
+}
+/*
+* {
+   border: 1px solid red !important;
+   
+   }
+ */
+* {
+   font-family: 'Lato', sans-serif;
+}
+
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+   }
+h1 {
+  color:black;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size:50px;
+  margin: 0px;
+  padding: 0px;
+  }
+ h2 {
+   color:gray;
+ }
+ h3 {
+	text-align:center;
+	text-transform: uppercase;
+ }
+.caption {
+  text-align:right;
+  text-transform: uppercase;
+  margin:0px;
+  padding: 0px;
+}
+.images {
+	display: block;
+	margin: 0 auto;
+}
+hr{
+	display: block;
+	border-style: solid;
+	border-width: 5px;
+	border-color: lightgrey;
+	width: 1000px;
+}
+.row {
+	width: 100%;
+	display:flex; 
+	flex-wrap: wrap;
+	}
+.col-1 {
+	width: 8.33%;
+	}
+.col-2 {
+	width: 16.66%;
+	}
+.col-3 {
+	width: 25%;
+	}
+.col-4 {
+	width: 33.33%;
+	}
+.col-5 {
+	width: 41.66%;
+	}
+.col-6 {
+	width: 50%;
+	}
+.col-7 {
+	width: 58.33%;
+	}
+.col-8 {
+	width: 66.66%;
+	}
+.col-9 {
+	width: 75%;
+	}
+.col-10 {
+	width: 83.33;
+	}
+.col-11 {
+	width: 91.66%;
+	}
+.col-12{
+	width: 100%;
+	}
