@@ -1,3 +1,4 @@
+
 html, body {
   margin: auto;
   padding: 0;
@@ -32,7 +33,7 @@ html, body {
 }
 
 .btn-default:hover, .btn-default:active {
-	border: solid 1px orange;
+	border: solid 1px teal;
 	color: gray;
 	background: none;
 	width: 80%;
@@ -82,8 +83,8 @@ html, body {
 	border-radius:  50%;
     height:  150px;
     width: 150px;
-    background: url("https://unsplash.it/150/?random");
     margin: auto;
+    overflow: hidden;
 }
 
 .circle-inner {
@@ -91,5 +92,18 @@ html, body {
     height: 150px;
     width: 150px;
     margin:  auto;
-    background-color:  rgba(34,34,34,.5);
+    background-color:  white;
+    border: teal 5px solid;
+    content:"\270f";
+    overflow: hidden;
+}
+
+.glyphicon {
+    line-height: 150px;
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+    color: teal;
+    text-align: center;
+    margin-left: 50px;
 }
