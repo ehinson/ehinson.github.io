@@ -1,58 +1,95 @@
-body{
-  font-family: 'Raleway', sans-serif;
-  color: #131A2D;
-  font-weight: 400;
+html, body {
+  margin: auto;
+  padding: 0;
+  font-family: 'Raleway', serif;
+  font-weight: 200;
+  max-width: 1400px;
 
 }
-.header-cont {
-  width:85%;
-  position: fixed;
-  z-index: 1;
-  top:0px;
-  background-color:white;
-  opacity: 0.6;
 
-}
-.text-muted{
-  color: #BCBBBB;
-}
-.text-light{
-  color:#D0C4AB;
-}
-.text-thick{
-  font-weight: 900;
+.container {
+    
 }
 
-.title-super{
-  font-size:60px;
+.col-md-4 {
+	box-sizing: border-box;
+	padding: 10px;
 }
 
-.title-logo{
-  margin: 20px;
+.btn-primary {
+	font-weight:  100;
+    letter-spacing: 1px;
+    background-color: none;
+    background:  none !important;
+    border: white solid 1px;
+    border-radius:  0;
 }
 
-.horizontal-line {
-  background-color: #D0C4AB;
-  padding:2px;
-}
-.row-background {
-  padding-top:0px;
-  padding-bottom:10px;
-  background-color: black;
-  padding-left: 0px;
-  padding-right:0px;
-  margin-left:0px;
-  margin-right:0px;
- 
-}
-.project-text{
-  font-size: 36px;
-  font-weight:400;
+.btn-default {
+	width: 80%;
+	border-radius: 0;
+
 }
 
-a {
-  color: #D0C4AB;
+.btn-default:hover, .btn-default:active {
+	border: solid 1px orange;
+	color: gray;
+	background: none;
+	width: 80%;
 }
-h1, h4{
-  margin-right:20px;
+/* Navigation */
+
+.navbar-brand {
+	letter-spacing: .75px;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+    background: url("https://ununsplash.imgix.net/21/mac-glasses.JPG?q=75&amp;fm=jpg&amp;s=b071b2245118757fbfc6ff9f9dd9cb7c") no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height:  600px;
+}
+
+.jumbotron .container {
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height:  100%;
+    padding: 100px 20% 50px 20%;
+    padding: auto;
+/*    margin-bottom: auto;
+*/}
+.jumbotron h1 {
+	font-weight: 100;
+}
+
+.jumbotron p {
+    width: 100%;
+    letter-spacing: .5px;
+    font-weight: 100;
+
+} 
+
+/* Supporting */
+.supporting p {
+	letter-spacing: .75px;
+}
+
+.circle-outer {
+	border-radius:  50%;
+    height:  150px;
+    width: 150px;
+    background: url("https://unsplash.it/150/?random");
+    margin: auto;
+}
+
+.circle-inner {
+	border-radius:  50%;
+    height: 150px;
+    width: 150px;
+    margin:  auto;
+    background-color:  rgba(34,34,34,.5);
 }
