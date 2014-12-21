@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
+    
   </head>
   <body>
    <!--Main Navigation -->
@@ -40,8 +41,8 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Hi. I'm Erin.</h1>
-        <p>I'm a designer and developer based in Charlotte, North Carolina. I love pizza, ice cream and box-sizing: border-box. Cat person. Trivia nerd.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Erin who?</a></p>
+        <p>I'm a designer and developer based in Charlotte, North Carolina. I love autumn, ice cream and box-sizing: border-box. <br>Cat person. <br>Trivia nerd.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button"  data-toggle="modal" data-target="#modalImageHead">Erin who?</a></p>
       </div><!-- /container -->
     </div><!--.jumbotron-->
 
@@ -56,7 +57,7 @@
              </div><!--.circle-outer-->
              <h2 class="text-center">Design</h2>
              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-             <p class="text-center"><a class="btn btn-default text-center" href="#" role="button">View details »</a></p>
+             <p class="text-center"><a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#modalImage1">View details »</a></p>
           </div><!--.col-md-4-->
           <div class="col-md-4">
             <div class="circle-outer">
@@ -81,17 +82,93 @@
         <hr>
 
         <footer>
-          <p class="text-right">© Erin Hinson</p>
+          <p class="text-right">© Erin Q. Hinson</p>
         </footer>
+
+
       </div> <!-- /container -->
     </div><!--supporting-->
 
     <!-- JavaScript-->
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   
+    <!-- Modal Head-->
+        <div class="modal fade" id="modalImageHead" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                <img src=""
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- Modal 1-->
+    <div class="modal fade" id="modalImage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <img src=""
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Modal 2-->
+    <div class="modal fade" id="modalImage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <img src=""
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3-->
+    <div class="modal fade" id="modalImage3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <img src=""
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </body></html>
