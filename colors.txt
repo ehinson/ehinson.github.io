@@ -1,0 +1,16 @@
+green:
+
+HTML code:	#80A172
+RGB code:	R: 128 G: 161 B: 114
+
+	HTML code:	#58804C
+RGB code:	R: 88 G: 128 B: 76
+
+orange/ brown
+
+	HTML code:	#AD966D
+RGB code:	R: 173 G: 150 B: 109
+
+blue:
+	HTML code:	#A7B4D7
+RGB code:	R: 167 G: 180 B: 215
