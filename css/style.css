@@ -87,18 +87,27 @@ html, body {
 
 .col-md-4 {
     padding: 30px;
+    vertical-align: middle;
 }
 
 .project-bg{
     background: url("https://ununsplash.imgix.net/photo-1414788020357-3690cfdab669?q=75&fm=jpg&s=da7d3842604f06bf5c6ded7f4fe7aeed")no-repeat center center;
     background-size: cover !important;
     height: 300px;
-    padding: 25px;
+    padding: 0px;
     /* -webkit-filter: blur(1px); */
     /* padding: 20px; */
     box-sizing: border-box;
     border: 1px solid gray;
-    margin-top: 30px;
+    margin-top: 50px;
+}
+
+.project-bg-etsy{
+    background: url("../images/etsyHome.png");
+}
+
+.project-bg-pinterest{
+    background: url("../images/pinterestHome.png");
 }
 
 .project-bg-etsy{
@@ -106,7 +115,7 @@ html, body {
 }
 .project-fg {
     background-color: rgba(0,0,0,.3);
-    height: 250px;
+    height: 300px;
     /* margin: 75px; */
     vertical-align: middle;
     /* padding: 75px; */
@@ -133,7 +142,20 @@ html, body {
     transform: translateY(-50%);
     padding: 50px 0px;
     border: 2px solid white;
-    background-color: rgba(255,255,255,.5);
+    letter-spacing: 1px;
+    background: none;
+}
+
+.text-middle:hover {
+    border:none;
+    font-weight: bold;
+    background-color: rgba(255,255,255,1);
+    color:black;
+    border: none;
+}
+
+h4.text-middle {
+    font-size: 30px;
 }
 /* Miscellaneous Styles */
 
