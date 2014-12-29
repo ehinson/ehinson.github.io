@@ -7,8 +7,11 @@ html, body {
   max-width: 1400px;
 
 }
-
-
+.shadow {
+  -moz-box-shadow:    0px 10px 10px -10px #ccc;
+  -webkit-box-shadow: 0px 10px 10px -10px #ccc;
+  box-shadow:         0px 10px 10px -10px #ccc;
+}
 /*Buttons */
 
 .btn-primary {
@@ -21,16 +24,16 @@ html, body {
 }
 
 .btn-default {
-	width: 80%;
+	width: 100%;
 	border-radius: 0;
 
 }
 
 .btn-default:hover, .btn-default:active {
-	border: solid 1px teal;
+	border: solid 1px orange;
 	color: gray;
 	background: none;
-	width: 80%;
+	width: 100%;
 }
 /* Navigation */
 
@@ -45,8 +48,9 @@ html, body {
     background-size: cover;
     color: whitesmoke;
     padding-bottom: 0px;
+    margin-bottom: 0px;
     padding-top: 0px;
-    height:  600px;
+    height:  500px;
 }
 
 .jumbotron .container {
@@ -73,7 +77,11 @@ html, body {
 }
 
 /* Supporting */
-.supporting p {
+
+.wide{
+    width: 100%;
+}
+.supporting p h2 h3 {
 	letter-spacing: .75px;
 }
 
@@ -81,19 +89,23 @@ html, body {
     padding: 30px;
 }
 
-.project-bg {
+.project-bg{
     background: url("https://ununsplash.imgix.net/photo-1414788020357-3690cfdab669?q=75&fm=jpg&s=da7d3842604f06bf5c6ded7f4fe7aeed")no-repeat center center;
-    background-size: cover;
+    background-size: cover !important;
     height: 300px;
     padding: 25px;
     /* -webkit-filter: blur(1px); */
     /* padding: 20px; */
     box-sizing: border-box;
+    border: 1px solid gray;
     margin-top: 30px;
 }
 
+.project-bg-etsy{
+    background: url("../images/etsyHome.png");
+}
 .project-fg {
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(0,0,0,.3);
     height: 250px;
     /* margin: 75px; */
     vertical-align: middle;
@@ -121,6 +133,7 @@ html, body {
     transform: translateY(-50%);
     padding: 50px 0px;
     border: 2px solid white;
+    background-color: rgba(255,255,255,.5);
 }
 /* Miscellaneous Styles */
 
