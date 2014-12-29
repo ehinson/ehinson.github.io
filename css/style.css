@@ -70,11 +70,14 @@ html, body {
     width: 100%;
     letter-spacing: .5px;
     font-weight: 100;
+    padding-top: 15px;
+    padding-left: 5px;
 
 } 
 .header {
     z-index: 1;
 }
+
 
 /* Supporting */
 
@@ -154,9 +157,9 @@ html, body {
     border: none;
 }
 
-h4.text-middle {
+/*h4.text-middle {
     font-size: 30px;
-}
+}*/
 /* Miscellaneous Styles */
 
 .no-border{
@@ -177,9 +180,9 @@ h4.text-middle {
 .white{
     background-color: #A7B4D7;
 }
-
 .orange {
-    background-color: #80A172;
+    color: orange;
+    display:none;
 }
 
 .gray {

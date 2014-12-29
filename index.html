@@ -31,7 +31,8 @@
       <div class="container">
         <div class="row">
         <div class="col-md-8 col-md-offset-2">
-        <h1>Hi.</h1>
+      
+        <h1 id="p1">Hi.<span id="p2" class="orange">nson</span></h1>
         <p> I'm Erin. <br> I'm a designer and developer based in Charlotte, North Carolina. I love autumn, ice cream and box-sizing: border-box. <br>Trivia nerd. <br>Cat person. </p>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button"  data-toggle="modal" data-target="#modalImageHead">Erin who?</a></p> -->
       </div>
@@ -60,26 +61,18 @@
                 
                 <p class="text-center"><a class="btn btn-default" href="http://etsy-app.herokuapp.com/" role="button" target="_blank">View It Live »</a></p>
           </div>-->
-         <div class="col-md-8 project-bg" data-toggle="modal" data-target="#modalImage2">
+         <div class="col-md-8 col-md-offset-2 project-bg project-bg-etsy" data-toggle="modal" data-target="#modalImage2">
             <div class="project-fg">
-              <p class="text-middle">Pinterest</p>
+              <p class="text-middle text-uppercase">Pinterest</p>
             </div>
           </div>
-           <div class="col-md-4">
-              <h2 class="text-uppercase">Pinterest Clone</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p class="text-center"><a class="btn btn-default" href="#" role="button">View details »</a></p>
-          </div><!--.col-md-4-->
-          <div class="col-md-8 project-bg" data-toggle="modal" data-target="#modalImage3">
+           
+          <div class="col-md-8 col-md-offset-2 project-bg project-bg-etsy" data-toggle="modal" data-target="#modalImage3">
             <div class="project-fg">
-              <p class="text-middle">Odot</p>
+              <p class="text-middle text-uppercase">Odot</p>
             </div>
           </div>
-          <div class="col-md-4">
-              <h2 class="text-uppercase">Odot</h2>
-                <p>A recreation of the Etsy home, categories and products pages: Incorporated user authentication and validation using the Devise gem. Styled with Bootstrap.</p>
-                <p class="text-center"><a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#modalImage1">View details »</a></p>
-          </div><!--.col-md-4-->
+          
         </div><!--row-->
 
         <hr>
@@ -97,6 +90,7 @@
     
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
@@ -150,9 +144,10 @@
           </div>
           <div class="modal-body">
             <img class="modal-image" src="https://ununsplash.imgix.net/photo-1414788020357-3690cfdab669?q=75&fm=jpg&s=da7d3842604f06bf5c6ded7f4fe7aeed">
+            <p class="text-center">A recreation of the Pinterest. Includes user authentication and validation functionality with Active Admin and OAuth gems. Styled with Bootstrap.</p>
           </div>
           <div class="modal-footer text-center">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <p class="text-center"><a class="btn btn-default" href="https://github.com/ehinson/erin_pinterest" role="button" target="_blank">View It On GitHub »</a></p>
             <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
