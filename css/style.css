@@ -94,7 +94,6 @@ html, body {
 }
 
 .project-bg{
-    background: url("https://ununsplash.imgix.net/photo-1414788020357-3690cfdab669?q=75&fm=jpg&s=da7d3842604f06bf5c6ded7f4fe7aeed")no-repeat center center;
     background-size: cover !important;
     height: 300px;
     padding: 0px;
