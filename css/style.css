@@ -2,8 +2,8 @@
 html, body {
   margin: auto;
   padding: 0;
-  font-family: 'Raleway', serif;
-  font-weight: 200;
+  /*font-family: 'Raleway', serif;*/
+  font-weight: 100;
   max-width: 1400px;
 
 }
@@ -26,16 +26,41 @@ html, body {
 .btn-default {
 	width: 100%;
 	border-radius: 0;
+    background: none;
+    color: white;
+}
 
+.email {
+    padding: 15px;
+    background-color: darkorange !important;
+    border: none !important;
 }
 
 .btn-default:hover, .btn-default:active {
-	border: solid 1px orange;
-	color: gray;
+	border: solid 1px white;
+	color: white;
 	background: none;
 	width: 100%;
 }
+
+a.btn.btn-default  {
+    letter-spacing: 1px;
+    font-weight: 100;
+}
 /* Navigation */
+.navbar {
+    background: none;
+    border: none;
+}
+.navbar-header {
+    width: 100%;
+}
+
+.navbar a, 
+.navbar a:hover,
+.navbar a:visited {
+    color: white;
+}
 
 .navbar-brand {
 	letter-spacing: .75px;
@@ -50,16 +75,17 @@ html, body {
     padding-bottom: 0px;
     margin-bottom: 0px;
     padding-top: 0px;
-    height:  500px;
+    height:  800px;
+    position: relative;
 }
 
-.jumbotron .container {
+.sheer {
     background-color: rgba(0,0,0,.5);
     width: 100%;
     height:  100%;
     padding: 100px 5% 0px 5%;
     padding: auto;
-    margin-top: 50px;
+    margin-top: 0px;
 /*    margin-bottom: auto;
 */}
 .jumbotron h1 {
@@ -76,6 +102,32 @@ html, body {
 } 
 .header {
     z-index: 1;
+}
+
+.subhead {
+    position: absolute;
+    top:600px;
+    background-color: darkorange;
+    height: 200px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.subhead.fix-div {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%; 
+    z-index: 1000;
+
+}
+.subhead h2 {
+    font-size: 1.2em;
+    color: white;
+    font-weight: 100;
+    letter-spacing: .15em;
 }
 
 
@@ -165,6 +217,10 @@ html, body {
     border: none;
 }
 
+h4 {
+    font-weight: 100;
+}
+
 .second {
     margin-top: -100px;
 }
@@ -172,6 +228,18 @@ html, body {
 .main {
         height: 300px;
     width: 300px;
+}
+
+.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.strong {
+    font-weight: 400;
 }
 
 /*colors*/
@@ -182,6 +250,10 @@ html, body {
 .orange {
     color: orange;
     display:none;
+}
+
+.darkorange {
+    background-color: darkorange;
 }
 
 .gray {
@@ -197,4 +269,25 @@ html, body {
 }
 .black-text {
     color:black;
+}
+
+/* Modal */
+
+.modal-title {
+    color: white;
+}
+
+.modal-header {
+    background-color: darkorange;
+}
+
+@media (max-width: 500) {
+  .subhead h2 {
+    font-size: 14px !important;
+  }
+
+  .affix {
+    top: 50px;
+  }
+ 
 }

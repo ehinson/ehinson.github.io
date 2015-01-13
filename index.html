@@ -10,25 +10,21 @@
     
     
   </head>
-  <body>
+  <body class="fix-div">
    <!--Main Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand text-uppercase" href="index.html" >Erin (Q.) Hinson</a>
+          <a class="navbar-brand" href="index.html" >erin<strong>hinson</strong></a>
+          <div class = "email pull-right white-text text-center"><span class="glyphicon glyphicon-envelope"></span></div>
         </div>
+        
       </div>
     </nav>
 
     <!-- Main jumbotron-->
-    <div class="jumbotron">
-      <div class="container">
+    <div class="jumbotron wrap">
+      <div class="container sheer">
         <div class="row">
         <div class="col-md-8 col-md-offset-2">
       
@@ -38,36 +34,35 @@
       </div>
     </div>
       </div><!-- /container -->
+       
     </div><!--.jumbotron-->
+    <div class="container text-center text-uppercase subhead wide">
+          <h2>things i've done</h2>
+          </div>
 
     <!--Supporting-->
     <div class ="supporting">
-      <div class="container wide">
-        <div class="row ">
-          <div class="col-md-12 text-center text-uppercase shadow">
-          <h2>The Things I've Done</h2>
-          </div>
-        </div>
-      </div>
+
       <div class="container">
         <div class="row ">
-          <div class="col-md-8 col-md-offset-2 project-bg project-bg-etsy" data-toggle="modal" data-target="#modalImage1">
+          <div class="col-md-6 project-bg project-bg-etsy" data-toggle="modal" data-target="#modalImage1">
             <div class="project-fg">
               <h4 class="text-middle text-uppercase">Etsy</h4>
             </div>
           </div>
-          <!-- <div class="col-md-4">
-              <h3 class="text-uppercase text-center">Etsy Clone</h3>
-                
-                <p class="text-center"><a class="btn btn-default" href="http://etsy-app.herokuapp.com/" role="button" target="_blank">View It Live »</a></p>
-          </div>-->
-         <div class="col-md-8 col-md-offset-2 project-bg project-bg-pinterest" data-toggle="modal" data-target="#modalImage2">
+          <div class="col-md-6 project-bg project-bg-etsy" data-toggle="modal" data-target="#modalImage1">
+            <div class="project-fg">
+              <h4 class="text-middle text-uppercase">Etsy</h4>
+            </div>
+          </div>
+          
+         <div class="col-md-6 project-bg project-bg-pinterest" data-toggle="modal" data-target="#modalImage2">
             <div class="project-fg">
               <p class="text-middle text-uppercase">Pinterest</p>
             </div>
           </div>
            
-          <div class="col-md-8 col-md-offset-2 project-bg project-bg-etsy" data-toggle="modal" data-target="#modalImage3">
+          <div class="col-md-6 project-bg project-bg-etsy" data-toggle="modal" data-target="#modalImage3">
             <div class="project-fg">
               <p class="text-middle text-uppercase">Odot</p>
             </div>
@@ -78,8 +73,14 @@
         <hr>
 
         <footer>
-          <p class="text-right">© Erin Q. Hinson</p>
-          <!-- <p class="text-right">SVG created by Anna Weiss<br>from the Noun Project</p> -->
+          <p class="text-right"> © 
+            <script type="text/javascript"> 
+               var day = new Date();
+               var year = day.getFullYear();
+               document.write(year);
+            </script>
+
+        Erin Q. Hinson</p>
         </footer>
 
 
@@ -115,20 +116,19 @@
         </div> -->
     <!-- Modal 1-->
     <div class="modal fade" id="modalImage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog ">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header darkorange white-text">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="myModalLabel">Etsy Clone</h4>
+            <h4 class="modal-title thin" id="myModalLabel">etsy<strong>clone</strong></h4>
           </div>
           <div class="modal-body">
             <img src="images/etsyHome.png" alt="Portfolio image of the Etsy home page.">
             <p></p>
             <p class="text-center">A recreation of the Etsy home, categories and products pages: Incorporated user authentication and validation using the Devise gem. Styled with Bootstrap.</p>
           </div>
-          <div class="modal-footer">
-            <p class="text-center"><a class="btn btn-default" href="http://etsy-app.herokuapp.com/" role="button" target="_blank">View It Live »</a></p>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="modal-footer darkorange">
+            <p class="text-center "><a class="btn btn-default white-text" href="http://etsy-app.herokuapp.com/" role="button" target="_blank">view it <strong> live </strong>»</a></p>
           </div>
         </div>
       </div>
