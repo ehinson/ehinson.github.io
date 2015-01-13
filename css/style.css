@@ -75,7 +75,7 @@ a.btn.btn-default  {
     padding-bottom: 0px;
     margin-bottom: 0px;
     padding-top: 0px;
-    height:  800px;
+    height:  700px;
     position: relative;
 }
 
@@ -108,7 +108,7 @@ a.btn.btn-default  {
     position: absolute;
     top:600px;
     background-color: darkorange;
-    height: 200px;
+    height: 100px;
     margin: 0;
     padding-left: 0;
     padding-right: 0;
@@ -140,8 +140,7 @@ a.btn.btn-default  {
 	letter-spacing: .75px;
 }
 
-.col-md-4 {
-    padding: 30px;
+.col-md-5 {
     vertical-align: middle;
 }
 
@@ -152,7 +151,6 @@ a.btn.btn-default  {
     /* -webkit-filter: blur(1px); */
     /* padding: 20px; */
     box-sizing: border-box;
-    border: 1px solid gray;
     margin-top: 50px;
 }
 
@@ -282,12 +280,6 @@ h4 {
 }
 
 @media (max-width: 500) {
-  .subhead h2 {
-    font-size: 14px !important;
-  }
 
-  .affix {
-    top: 50px;
-  }
  
 }
