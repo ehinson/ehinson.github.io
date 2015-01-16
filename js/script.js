@@ -1,12 +1,12 @@
  $(window).scroll(function(){
     if ($(this).scrollTop() > 600) {
       $('.subhead h2').addClass("affix");
-      $('span.glyphicon-chevron-down').hide();
+      $('.subhead svg').hide();
       
     }
     else{
       $('.subhead h2').removeClass("affix");
-      $('span.glyphicon-chevron-down').show();
+      $('.subhead svg').show();
     }
   });
 
