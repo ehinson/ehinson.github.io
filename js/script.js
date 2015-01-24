@@ -13,10 +13,11 @@
  $(window).scroll(function(){
     if ($(this).scrollTop() > 650) {
       $('.subhead').addClass("fix-div");
-
+      
     }
-    else{
+    else {
       $('.subhead').removeClass("fix-div");
+
     }
  });
 
