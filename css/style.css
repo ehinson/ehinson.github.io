@@ -216,8 +216,8 @@ a.navbar-brand {
     background: url("../images/etsyHome.png");
 }
 
-.project-bg-pinterest{
-    background: url("../images/pinterestHome.png");
+.project-bg-reviewerin{
+    background: url("../images/Reviewerin-home.png");
 }
 
 .project-bg-posterin{
@@ -301,7 +301,6 @@ a.navbar-brand {
 
 
 .footer {
-    height: 200px;
     color: darkorange;
     font-weight: 200;
 }
