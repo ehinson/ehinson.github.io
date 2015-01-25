@@ -301,6 +301,7 @@ a.navbar-brand {
 
 
 .footer {
+    background: 
     color: darkorange;
     font-weight: 200;
 }
@@ -364,6 +365,8 @@ a.navbar-brand {
 svg {
     fill: white;
     height: 20px;
+    width: 20px;
+    display: inline-block;
 }
 
 /*text colors*/
@@ -375,6 +378,36 @@ svg {
 }
 .black-text {
     color:black;
+}
+
+.footer-header {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .75px;
+    padding-top: 15px;
+    color: white;
+    font-weight: 100;
+}
+.footer .col-md-12 {
+    color: white;
+    font-weight: 100;
+    height: 100%;
+}
+.copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+p.svg {
+    display: inline;
+    padding: 20px;
+}
+
+.footer .sheer {
+    height: 100px;
+    padding: 0 50px 0 50px;
+    background: darkorange;
 }
  /* Media Queries */
 
