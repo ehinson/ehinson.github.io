@@ -90,6 +90,7 @@ a.btn.btn-default  {
 
 a.navbar-brand {
 	letter-spacing: .75px;
+    margin-left: 30px;
 
 }
 
@@ -362,11 +363,12 @@ a.navbar-brand {
     display: none;
 }
 
-svg {
+.svg svg {
     fill: white;
     height: 20px;
     width: 20px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 /*text colors*/
@@ -404,17 +406,72 @@ p.svg {
     padding: 20px;
 }
 
+   
+
+
 .footer .sheer {
     height: 100px;
     padding: 0 50px 0 50px;
     background: darkorange;
 }
+/* Parallax */
+
+.parallax-2 {
+  background: url("https://ununsplash.imgix.net/21/mac-glasses.JPG?q=75&amp;fm=jpg&amp;s=b071b2245118757fbfc6ff9f9dd9cb7c") no-repeat center center fixed;
+  background-size: cover;
+  height: 600px;
+}
+
+.parallax .container {
+    width: 100%;
+    color: white;
+}
+
+.parallax .container h1,
+.parallax .container p {
+    width: 100%;
+    letter-spacing: .5px;
+    font-weight: 100;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+
+.parallax .container p {
+    font-size: 1.5em;
+}
+
+.parallax .container h1 {
+    font-size: 4em;
+}
+
+
  /* Media Queries */
+
+.sampleClass {
+    float:left;
+}
+    
+@media only screen and (max-width: 500px){
+        .sampleClass {
+            float:none;
+        }
+}
 
 @media screen and (max-width: 500px) {
   a.navbar-brand {
+    display: none;
+   }
+  .mobile {
     background-color: darkorange;
-    margin-left: 20px;
+    margin-left: 30px;
+    color: white;
+    display: block !important;
+   }
+}
+
+@media screen and (min-width: 500px) {
+  .mobile {
+    display: none !important;
    }
 }
 
@@ -423,3 +480,4 @@ p.svg {
     margin-left: 0;
   }
 }
+
