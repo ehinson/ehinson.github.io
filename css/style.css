@@ -431,7 +431,7 @@ p.svg {
     padding: 0;
 }
 
-.parallax .container h1,
+.parallax .container h2,
 .parallax .container p {
     width: 100%;
     letter-spacing: .5px;
@@ -444,8 +444,8 @@ p.svg {
     font-size: 1.5em;
 }
 
-.parallax .container h1 {
-    font-size: 4em;
+.parallax .container h2 {
+    font-size: 3.5em;
 }
 
 
