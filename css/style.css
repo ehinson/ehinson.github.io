@@ -425,6 +425,11 @@ p.svg {
 .parallax .container {
     width: 100%;
     color: white;
+    padding: 0;
+}
+
+.p0 {
+    padding: 0;
 }
 
 .parallax .container h1,
