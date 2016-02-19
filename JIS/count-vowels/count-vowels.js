@@ -44,12 +44,18 @@ function countVowels(){
     if (aye == 0 && eee == 0 && eye == 0 && ohh == 0 && you == 0){
       
       results.style.display = "none";
-      noVowels.style.display = "block";
       noVowels.innerHTML = "There are no vowels in this string!";
     }
     else {
       results.style.display = "block";
-      noVowels.style.display = "none";
+      var sum = aye + eee + eye + ohh + you
+      if (sum == 1) {
+        noVowels.innerHTML = "There is "+ sum + " vowel in this string!";
+      }
+      else {
+        noVowels.innerHTML = "There are "+ sum + " vowels in this string!";
+      }
+      
       document.getElementById("userOutput1").innerHTML = aye;
       document.getElementById("userOutput2").innerHTML = eee;
       document.getElementById("userOutput3").innerHTML = eye;
