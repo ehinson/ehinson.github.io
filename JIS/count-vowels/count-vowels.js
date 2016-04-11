@@ -18,7 +18,7 @@ function countVowels(){
     // of a syllable that has more than one letter. 
     // If y is anywhere else in the syllable, it is a vowel.
     // var why = 0;
-    string = string.split("");
+    string = string.toLowerCase().split("");
     //string = string.sort();
     for (var i = 0; i < string.length; i++){
           switch(vowels.indexOf(string[i])){
@@ -61,11 +61,11 @@ function countVowels(){
       document.getElementById("userOutput3").innerHTML = eye;
       document.getElementById("userOutput4").innerHTML = ohh;
       document.getElementById("userOutput5").innerHTML = you;
-      var aye = undefined;
-      var eee = undefined;
-      var eye = undefined;
-      var ohh = undefined;
-      var you = undefined;
+      var aye = null;
+      var eee = null;
+      var eye = null;
+      var ohh = null;
+      var you = null;
     }
     
 
