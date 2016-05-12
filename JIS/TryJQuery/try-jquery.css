@@ -1,0 +1,182 @@
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 31px;
+    right: 0;
+    background: #343b42;
+    color: white;
+    font-family: KlavikaWeb, Helvetica, sans-serif;
+    min-width: 650px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: KlavikaWeb, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3.61111em;
+    line-height: 1.10769em;
+    margin-top: 0.36923em;
+    margin-bottom: 0.36923em;
+    color: white;
+    padding: 0 24px;
+    }
+
+h2 {
+    font-size: 1em;
+    line-height: 1.33333em;
+    position: relative;
+    top: 2px;
+}
+
+
+
+li {
+    list-style: outside none none;
+}
+
+
+a {
+    color: #a0cafe;
+    text-decoration: none;
+}
+
+
+#vacations, #tours {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 1.33333em;
+    }
+
+.sorting, .filters, #filters {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0.86667em;
+    background: rgba(37, 43, 48, 0.5) !important;
+    float: left !important;
+    padding: 10px 8px !important;
+    position: absolute !important;
+    right: 0 !important;
+    text-align: center !important;
+    top: -0.75em !important;
+}
+
+#vacations::after, #tours::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+#vacations > li + li, #tours > li + li, #tours > ul > li + li, #all-tours ul li + li {
+    margin-left: 3%;
+}
+
+
+.vote {
+    margin-right: -42px;
+    position: absolute;
+    right: 50%;
+    top: 37px;
+}
+
+.vote {
+    margin-right: 0;
+    top: 10px;
+    right: 3px;
+}
+
+.vote li {
+    background: #3b454d;
+    display: inline-block;
+    min-height: 0;
+    overflow: hidden;
+    margin: 0 5px;
+}
+
+.vote a {
+    color: #4cb64f;
+    padding: 4px 10px;
+}
+
+.sorting li, .filters li, #filters li {
+    float: left !important;
+    min-height: auto !important;
+    padding: 4px !important;
+    width: auto !important;
+}
+
+.sorting a, .sorting button, .filters a, .filters button, #filters a, #filters button {
+    background: #252b30 !important;
+    border: 1px solid #121415 !important;
+    color: #8e9aa5 !important;
+    font-weight: bold !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    text-transform: none !important;
+    padding: 3px 5px !important;
+    width: auto !important;
+    }
+
+#vacations > li, #tours > li, #tours > ul > li, #all-tours ul li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgba(37, 43, 48, 0.5);
+    float: left;
+    min-height: 6em;
+    padding: 0.5em;
+    position: relative;
+    vertical-align: top;
+    width: 22.75%;
+}
+
+.split:before, .sorting:before, .filters:before, #filters:before, .split:after, .sorting:after, .filters:after, #filters:after {
+    content: "";
+    display: table;
+}
+
+.details {
+    font-size: 0.88889em;
+    line-height: 1.5em;
+    background: #82add8;
+    border: 1px solid #191d20;
+    bottom: 0.5em;
+    color: #191d20;
+    display: block;
+    font-weight: bold;
+    left: 0.5em;
+    padding: 3px 0;
+    right: 0.5em;
+    text-align: center;
+}
+
+button {
+    font-size: 1em;
+    line-height: 1.33333em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    background: #4cb64f;
+    border: 1px solid #081f09;
+    color: black;
+    cursor: pointer;
+    display: block;
+    font-family: KlavikaWeb, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    padding: 5px 24px 3px 24px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.highlight {
+    border: 3px solid white;
+}
+
+

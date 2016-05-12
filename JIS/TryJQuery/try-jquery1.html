@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Try JQuery</title>
+  <link rel="stylesheet" href="try-jquery.css">
+</head>
+<body>
+  <div id="tours-wrapper">
+  <h1>Guided Tours</h1>
+  <ul id="tours">
+    <li class="america tour ">
+      <h2>New York, New York</h2>
+      <span class="details">$1,899 for 7 nights</span>
+      <button class="book" onclick="addTour(this);" id="0">Book Now</button>
+      <ul class="vote"><li><a href="#">↑</a></li><li><a href="#">↓</a></li></ul>
+    </li>
+    <li class="europe tour ">
+      <h2>Paris, France</h2>
+      <span class="details">$2,499 for 7 nights</span>
+      <button class="book" onclick="addTour(this);" id="1">Book Now</button>
+      <ul class="vote"><li><a href="#">↑</a></li><li><a href="#">↓</a></li></ul>
+    </li>
+    <li class="europe  tour sale">
+      <h2>Madrid, Spain</h2>
+      <span class="details">$1,577 for 5 nights</span>
+      <button class="book" onclick="addTour(this);" id="2">Book Now</button>
+      <ul class="vote"><li><a href="#">↑</a></li><li><a href="#">↓</a></li></ul>
+    </li>
+    <li class="asia tour ">
+      <h2>Tokyo, Japan</h2>
+      <span class="details">$1,999 for 5 nights</span>
+      <button class="book" onclick="addTour(this);" id="3">Book Now</button>
+      <ul class="vote"><li><a href="#">↑</a></li><li><a href="#">↓</a></li></ul>
+    </li>
+  </ul>
+
+  <ul class="sorting">
+    <li><a href="#">America</a></li>
+    <li><a href="#">Europe</a></li>
+    <li><a href="#">Asia</a></li>
+  </ul>
+</div>
+
+  <script src="try-jquery.js"></script>
+</body>
+</html>

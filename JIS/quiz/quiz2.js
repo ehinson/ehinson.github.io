@@ -22,8 +22,14 @@ var userInputs = document.getElementById('quiz1').elements,
         selectedAnswer: null
       },
       {
-        question: "What is Euler's number?",
-        choices: ["foo", 10, "over 9000", "the square root of -1"],
+        question: "What does 'bae' stand for?",
+        choices: ["Before Anyone Else", "It's just short for 'baby'", "p00p", "British Aerospace Engineering"],
+        // correctAnswer: 0,
+        selectedAnswer: null
+      },
+      {
+        question: "Which number is never equal to itself?",
+        choices: ["NaN", "null", "undefined", "Beyonce"],
         correctAnswer: 0,
         selectedAnswer: null
       },
@@ -70,6 +76,7 @@ function updateQuestion(){
       radios.forEach(function(item){
         item.checked = false;
       });
+      $(document).fadeIn('slow');
       fillInTheBlanks();
     }
 };
@@ -79,13 +86,12 @@ function checkAnswer(){
   radios.forEach(function(item){
     if (item.checked){
       allQuestions[currentQuestion].selectedAnswer = item.value;
-      alert("choice= " + item.value);
+      
     }
   });
   
-  if (ans == allQuestions[currentQuestion].selectedAnswer){
+  if (ans == allQuestions[currentQuestion].selectedAnswer || ans == undefined){
     score +=1;
-    alert("score = " + score);
   }
 };
 
@@ -115,6 +121,14 @@ function fillInTheBlanks(){
 
 
 };
+
+$(function(){
+    $('input#next').on('click', function(){
+      $(document).fadeOut('slow', updateQuestion());
+      
+    });
+  });
+
 
 // 
 // window.onload = function getRadios(){

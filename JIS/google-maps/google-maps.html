@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Maps</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="google-maps.css">
+</head>
+<body>
+  <div class="row">
+    <div class="col-xs-12">
+     <div class="col-xs-6">
+       <!-- Nav tabs -->
+      <ul class="nav nav-pills nav-stacked" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+      </ul>
+     </div>
+      
+    <div class="col-xs-6">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">Home</div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+          Profile
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="messages">
+          Messages
+          <div id="atlanta"></div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="settings">
+          Settings
+          <div id="new-york"></div>
+        </div>
+        <div id="map" style="width: 300px; height: 300px;"></div>
+      </div>
+    </div>
+      
+
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script>
+  function initMap() {
+    var charlotteMap = document.getElementById('map');
+    var map  = new google.maps.Map(charlotteMap,{
+      center: {lat: 35.228835, lng: -80.865259},
+      zoom: 8
+    });
+
+  };
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js"
+         async defer></script>
+  
+</body>
+</html>
