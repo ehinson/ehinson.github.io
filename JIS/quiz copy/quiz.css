@@ -1,0 +1,17 @@
+.form-group{
+  padding: 20px;
+}
+
+#thanks {
+  display: none;
+}
+
+.circle {
+  border-radius: 50%;
+  background: red;
+  height: 50px;
+  width: 50px;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}

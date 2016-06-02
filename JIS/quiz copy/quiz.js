@@ -42,9 +42,10 @@ var userInputs = document.getElementById('quiz1').elements,
     currentQuestion = 0,
     currentAnswer = 0,
     score = 0;
-    
-//Collect the radio buttons
-window.onload = function getRadios(){
+
+$(function(){
+
+function getRadios(){
   if (radios.length == 0){
     for (var i = 0; i < userInputs.length; i++){
       if (userInputs[i].type == "radio") {
@@ -53,8 +54,7 @@ window.onload = function getRadios(){
     };
   }
 };
-
-//is an individual radio button checked?
+  //is an individual radio button checked?
 function isChecked(obj){
   return obj.checked;
 };
@@ -63,7 +63,12 @@ function isChecked(obj){
 // replace question with question at index currentQuestion
 function updateQuestion(){
     // clear the error message
-   
+    document.getElementById("error-message").innerHTML = "";
+    
+    if (!radios.some(isChecked)){
+      document.getElementById("error-message").innerHTML = "Please choose an answer";
+    }
+    else{
 
       checkAnswer();
       currentQuestion +=1;
@@ -72,7 +77,7 @@ function updateQuestion(){
         item.checked = false;
       });
       fillInTheBlanks();
-  
+    }
 };
 
 function checkAnswer(){
@@ -115,24 +120,5 @@ function fillInTheBlanks(){
 
 
 };
-
-
-$(function(){
-    $('input#next').on('click', function(){
-
-
-      document.getElementById("error-message").innerHTML = "";
-      // make sure they chose an answer
-      if (!radios.some(isChecked)){
-        document.getElementById("error-message").innerHTML = "Please choose an answer";
-      }
-      else{
-        $('.panel').fadeOut('slow', function(){
-           updateQuestion();
-           $('.panel').fadeIn();   
-        });
-      }
-      
-    });
-  });
-
+  
+});

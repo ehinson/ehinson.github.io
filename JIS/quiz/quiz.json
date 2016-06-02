@@ -1,0 +1,37 @@
+var allQuestions = [
+      {
+        "question": "Which is one of the 7 Dwarves?",
+        "choices": ["Chesty", "Burpy", "Dopey", "Bubba"],
+        "correctAnswer": 2,
+        "selectedAnswer": null
+      },
+      {
+        "question": "What Javascript array method removes or inserts items, mutating the original array?",
+        "choices": [".slice()", ".splice()", ".thatsNice()", ".plop()"],
+        "correctAnswer": 1,
+        "selectedAnswer": null
+      },
+      {
+        "question": "What day of the week is it?",
+        "choices": ["Chesty", "Burpy", "Katilsday", days[d.getDay()]],
+        "correctAnswer": 3,
+        "selectedAnswer": null
+      },
+      {
+        "question": "What does 'bae' stand for?",
+        "choices": ["Before Anyone Else", "It's just short for 'baby'", "p00p", "British Aerospace Engineering"],
+        // "correctAnswer": 0,
+        "selectedAnswer": null
+      },
+      {
+        "question": "Which number is never equal to itself?",
+        "choices": ["NaN", "null", "undefined", "Beyonce"],
+        "correctAnswer": 0,
+        "selectedAnswer": null
+      },
+      {
+        "question": "Which number is never equal to itself?",
+        "choices": ["NaN", "null", "undefined", "Beyonce"],
+        "correctAnswer": 0,
+        "selectedAnswer": null
+      }]
