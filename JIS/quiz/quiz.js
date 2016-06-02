@@ -109,30 +109,54 @@ function fillInTheBlanks(){
   else{
     document.getElementById('quizQuestion').innerHTML = "Your Score";
     document.getElementById("score").innerHTML = score;
-    document.getElementById("next").style.display = "none";
-    document.getElementById('quiz1').style.display = "none";
+    $('#back, #next, #quiz1').hide();
+    // document.getElementById("next").style.display = "none";
+    // document.getElementById('quiz1').style.display = "none";
   }
 
 
 };
 
-
+// Next button
 $(function(){
     $('input#next').on('click', function(){
 
 
       document.getElementById("error-message").innerHTML = "";
+
       // make sure they chose an answer
       if (!radios.some(isChecked)){
         document.getElementById("error-message").innerHTML = "Please choose an answer";
       }
       else{
-        $('.panel').fadeOut('slow', function(){
+        $('.panel, input#back').fadeOut('slow', function(){
            updateQuestion();
-           $('.panel').fadeIn();   
+           $('.panel').fadeIn();
+           if (currentQuestion >= 1 &&currentQuestion < allQuestions.length-1){
+            $('input#back').fadeIn();
+           }  
         });
       }
       
     });
   });
+
+// Back button
+
+// Being called on document ready
+$(function(){
+    $('input#back').on('click', function(){
+      document.getElementById("error-message").innerHTML = "";
+      currentQuestion -=1;
+      var selAnswer = allQuestions[currentQuestion].selectedAnswer;
+      fillInTheBlanks();
+      if( selAnswer != null){
+        radios[selAnswer].checked = "checked" ;
+      } 
+    });
+
+
+
+  
+});
 
