@@ -14,7 +14,8 @@
     "react-fontawesome": "^1.6.1",
     "react-router-dom": "^4.1.1",
     "react-transition-group": "^1.1.3",
-    "reactstrap": "^4.6.2"
+    "reactstrap": "^4.6.2",
+    "styled-components": "^1.4.5"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
