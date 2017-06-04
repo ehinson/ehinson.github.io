@@ -1,8 +1,8 @@
 {
-  "name": "tutorialerin",
+  "name": "Portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ehinson.github.io",
+  "homepage": "https://ehinson.github.io/ehinson",
   "repo": "https://github.com/ehinson/ehinson.github.io.git",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
