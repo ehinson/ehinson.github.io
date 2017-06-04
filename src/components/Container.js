@@ -3,7 +3,7 @@ import Header from "./Header";
 import styled from "styled-components";
 import FontAwesome from "react-fontawesome";
 import { unstyleButton, minMedia, maxMedia } from "../utils/style-utils";
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {
   Grid as GridContainer,
   GridSection,
