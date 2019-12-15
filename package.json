@@ -1,7 +1,7 @@
 {
   "name": "eqhinson",
-  "version": "1.0.0",
-  "description": "",
+  "version": "3.0.0",
+  "description": "Erin Hinson's personal website",
   "keywords": [],
   "main": "src/index.js",
   "homepage": "https://ehinson.github.io/",

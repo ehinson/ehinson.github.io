@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+import { slideUpAndFadeIn } from "./animations";
+
 const StyledResume = styled.div`
   position: absolute;
   background: antiquewhite;
@@ -22,6 +24,7 @@ const StyledResume = styled.div`
       transform: translateY(0);
       opacity: 1;
       z-index: 190;
+      animation: ${slideUpAndFadeIn} 0.3s;
     `}
 
   @media screen and (max-width: 1024px) {
@@ -53,10 +56,10 @@ const StyledH2 = styled.h2`
   letter-spacing: 0;
   font-style: italic;
   font-weight: 900;
-  padding: 1rem 0 1rem;
 
   span {
     border-top: 1px solid black;
+    padding: 1rem 0 1rem;
   }
 `;
 
@@ -86,6 +89,7 @@ const WorkList = styled.ul`
   li:nth-child(2) {
     color: darkgray;
     font-size: 0.8rem;
+    padding: 0.2rem 0;
   }
 
   li:nth-child(3) {

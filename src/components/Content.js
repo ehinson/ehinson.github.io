@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { slideRightAndFadeIn } from "./animations";
 
@@ -28,6 +28,7 @@ const StyledH1 = styled.h1`
   font-style: italic;
   animation: ${slideRightAndFadeIn} 0.6s;
   z-index: 19;
+  opacity: 1;
 
   &:before,
   &:after {
@@ -52,6 +53,16 @@ const StyledH1 = styled.h1`
       transform: scale3d(1, 1, 1);
     }
   }
+
+  ${p =>
+    p.isResumeOpen &&
+    css`
+      transition: all 0.3s;
+      font-size: 20rem;
+      transform: translate(-5vh, -100%);
+      opacity: 0;
+      color: gray;
+    `}
 `;
 
 function Content({ isResumeOpen }) {
