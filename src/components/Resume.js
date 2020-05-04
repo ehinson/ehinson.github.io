@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
+import { workHistory } from "../data/work";
 
 import { slideUpAndFadeIn } from "./animations";
 
@@ -18,7 +19,7 @@ const StyledResume = styled.div`
   grid-template-columns: 45% 55%;
   grid-template-rows: 100%;
   grid-template-areas: "resumeHeader resumeBody";
-  ${p =>
+  ${(p) =>
     p.isOpen &&
     css`
       transform: translateY(0);
@@ -72,6 +73,7 @@ const StyledResumeBody = styled.div`
   grid-area: resumeBody;
   z-index: 201;
   padding: 2rem 3rem 0 2rem;
+  overflow: scroll;
 `;
 
 const Work = styled.div`
@@ -98,68 +100,80 @@ const WorkList = styled.ul`
 `;
 
 function Resume({ isResumeOpen }) {
+  const [workList, setActiveWorkList] = useState(null);
+  const [activeSections, setActiveSection] = useState({
+    skills: false,
+    work: false,
+  });
+
+  const handleOpenSections = (name) => {
+    console.log("hi");
+    const newState = {
+      ...activeSections,
+      [name]: !activeSections[name],
+    };
+
+    console.log(newState, activeSections[name]);
+    setActiveSection(newState);
+  };
   return (
     <StyledResume isOpen={isResumeOpen}>
       <StyledResumeHeader>
         <StyledHinson>Hinson</StyledHinson>
       </StyledResumeHeader>
       <StyledResumeBody>
+        <p>
+          {workList &&
+            Object.keys(workList).length > 0 &&
+            workList.detail[0].description}
+        </p>
         <Work>
-          <div class="container">
-            <StyledH2>
-              <span>Work</span>
-              <br />
-              Experience
-            </StyledH2>
-            <WorkList>
-              <li>2017 - PRESENT</li>
-              <li>
-                <b>TREETOP COMMONS LLC</b>
-              </li>
-              <li>FRONT END ENGINEER</li>
-            </WorkList>
-            <WorkList>
-              <li>2015 - 2017</li>
-              <li>
-                <b>XCELERATION INC</b>
-              </li>
-              <li>FRONT END DEVELOPER</li>
-            </WorkList>
-            <WorkList>
-              <li>2015</li>
-              <li>
-                <b>TECHNEKES LLC</b>
-              </li>
-              <li>UX DEVELOPER</li>
-            </WorkList>
-            <WorkList>
-              <li>2015</li>
-              <li>
-                <b>TECH TALENT SOUTH</b>
-              </li>
-              <li>INSTRUCTOR</li>
-            </WorkList>
-          </div>
+          <StyledH2 onClick={() => handleOpenSections("work")}>
+            <span>Work</span>
+            <br />
+            Experience
+          </StyledH2>
+          {/* <a type="application/pdf" href="../pdf/EHinsonResume2020.pdf">
+            Download full resume
+          </a> */}
+          {activeSections.work && (
+            <>
+              {workHistory.map((workItem) => (
+                <WorkList
+                  key={workItem.employer}
+                  onClick={() => setActiveWorkList(workItem)}
+                >
+                  <li>{workItem.years}</li>
+                  <li>
+                    <b>{workItem.employer}</b>
+                  </li>
+                  <li>{workItem.title}</li>
+                </WorkList>
+              ))}
+            </>
+          )}
         </Work>
-        <div class="skills section second" id="skills">
-          <Work>
-            <StyledH2>
-              <span>Skills</span>
-            </StyledH2>
-            <WorkList>
-              <li>HTML / CSS / SASS / Styled Components </li>
-            </WorkList>
-            <WorkList>
-              <li>Javascript / ES6+ / Webpack / Node / React / Redux </li>
-            </WorkList>
-            <WorkList>
-              <li>PostgreSQL / MongoDB</li>
-            </WorkList>
-            <WorkList>
-              <li>Flask / Ruby On Rails</li>
-            </WorkList>
-          </Work>
-        </div>
+        <Work>
+          <StyledH2 onClick={() => handleOpenSections("skills")}>
+            <span>Skills</span>
+          </StyledH2>
+          {activeSections.skills && (
+            <>
+              <WorkList>
+                <li>JavaScript / ES6+ / Webpack / Node / React / Redux</li>
+              </WorkList>
+              <WorkList>
+                <li>CSS-in-JS libraries (Styled Components, Emotion)</li>
+              </WorkList>
+              <WorkList>
+                <li>PostgreSQL / MongoDB</li>
+              </WorkList>
+              <WorkList>
+                <li>Flask / Ruby On Rails</li>
+              </WorkList>
+            </>
+          )}
+        </Work>
       </StyledResumeBody>
     </StyledResume>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import background from "../images/background.jpg";
 import linkedin from "../svg/linkedin.svg";
+import github from "../svg/github.svg";
 
 import { slideUpAndFadeIn } from "./animations";
 
@@ -57,7 +58,7 @@ const StyledStageContent = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  ${p =>
+  ${(p) =>
     p.isOpen &&
     css`
       opacity: 1;
@@ -113,7 +114,7 @@ const StyledItem = styled.div`
     left: 66.66%;
   }
 
-  ${p =>
+  ${(p) =>
     p.isOpen &&
     css`
       transform: translateY(0) scaleX(3);
@@ -219,10 +220,10 @@ function Header({ handleItemClick, isOpen }) {
         </StyledStageContent>
         <StyledStageContent isOpen={isOpen === 2}>
           <div>
-            I'm a developer based in Colorado. By day, I like to design and
-            develop beautiful sites. By night, I like to design and develop
-            beautiful sites. I love autumn, mixtapes, and box-sizing:
-            border-box.
+            I'm an experienced Full-Stack Developer based in Colorado. By day, I
+            like to design and develop beautiful sites. By night, I like to
+            design and develop beautiful sites. I love autumn, mixtapes, and
+            box-sizing: border-box.
             <br />
             <br />
             Trivia Nerd.
@@ -239,6 +240,12 @@ function Header({ handleItemClick, isOpen }) {
               rel="noopener noreferrer"
             >
               eqhinson
+            </a>
+          </div>
+          <div>
+            <img src={github} alt="Github" />
+            <a href="https://github.com/ehinson" rel="noopener noreferrer">
+              ehinson
             </a>
           </div>
         </StyledStageContent>

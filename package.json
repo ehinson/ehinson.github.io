@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "homepage": "https://ehinson.github.io/",
   "dependencies": {
+    "@react-pdf/renderer": "^1.6.8",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-scripts": "^3.3.0",
