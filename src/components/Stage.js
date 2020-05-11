@@ -66,7 +66,7 @@ const StyledStageContent = styled.div`
     `};
 
   > div {
-    max-width: 62%;
+    max-width: 65%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -192,6 +192,46 @@ const Link = styled.div`
   }
 `;
 
+const StyledH2 = styled.h2`
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0;
+  font-style: italic;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  span {
+    border-top: 1px solid black;
+    padding: 1rem 0 1rem;
+  }
+`;
+
+const Work = styled.div`
+  padding: 2rem 3rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+`;
+
+const WorkList = styled.ul`
+  list-style-type: none;
+  padding-inline-start: 0;
+
+  li:nth-child(1) {
+    font-size: 0.8rem;
+  }
+
+  li:nth-child(2) {
+    color: darkgray;
+    font-size: 0.8rem;
+    padding: 0.2rem 0;
+  }
+
+  li:nth-child(3) {
+    font-size: 1.2rem;
+  }
+`;
+
 function Header({ handleItemClick, isOpen }) {
   return (
     <StyledStage>
@@ -220,16 +260,25 @@ function Header({ handleItemClick, isOpen }) {
         </StyledStageContent>
         <StyledStageContent isOpen={isOpen === 2}>
           <div>
-            I'm an experienced Full-Stack Developer based in Colorado. By day, I
-            like to design and develop beautiful sites. By night, I like to
-            design and develop beautiful sites. I love autumn, mixtapes, and
-            box-sizing: border-box.
-            <br />
-            <br />
-            Trivia Nerd.
-            <br />
-            <br />
-            Cat person.
+            <Work>
+              <StyledH2>
+                <span>About me</span>
+              </StyledH2>
+              I'm a Full-stack Engineer with a front-end focus, offering
+              extensive experience building software in both onsite and remote
+              team environments. I have strong SaaS experience with an eye for
+              design, and exceptional mindfulness for scalability, code quality
+              and user experience. Excellent reputation as a team leader,
+              collaborator, and web developer, with passion for taking on
+              complex problems and helping drive solutions that positively
+              impact both the products and people involved.
+              <br />
+              <br />
+              Trivia Nerd.
+              <br />
+              <br />
+              Cat person.
+            </Work>
           </div>
         </StyledStageContent>
         <StyledStageContent isOpen={isOpen === 3}>

@@ -11,6 +11,7 @@ export const workHistory = [
           "Reporting to the Team Lead, migrate filmsupply.com from an Angular 1 app to React",
       },
     ],
+    skills: ["React", "Unstated", "Storybook", "Emotion"],
   },
   {
     years: "2017 - 2020",
@@ -30,6 +31,19 @@ export const workHistory = [
           "Reporting to the Front End Lead, collaborated with front end development team along with API, QA and DevOps to build and maintain NobleHour and Collaboratory SaaS and mobile products. Maintained component library, migrated legacy codebase, and worked toward WCAG 2.1 AA accessibility compliance. Led yearlong project to rewrite Add/Edit Hours feature, migrating from components.js to React. Built & introduced multiple logic & flow improvements and enhanced complex feature set.",
       },
     ],
+    skills: [
+      "React",
+      "Redux",
+      "Golang",
+      "Jest",
+      "Enzyme",
+      "ComponentJS",
+      "JQuery",
+      "Storybook",
+      "LESS",
+      "Styled Components",
+      "Webpack",
+    ],
   },
   {
     years: "2015 - 2017",
@@ -42,6 +56,20 @@ export const workHistory = [
         description:
           "Reporting to the Front End Architect, developed and maintained responsive apps, banners, landing pages and emails for client programs. Conducted cross-browser testing and troubleshooting, identified potential issues and implemented fixes as necessary.",
       },
+    ],
+    skills: [
+      "React",
+      "Redux",
+      "Flow",
+      "Jest",
+      "Enzyme",
+      "Middleman",
+      "Gulp",
+      "Webpack",
+      "Bootstrap",
+      "Browserstack",
+      "Storybook",
+      "Jenkins",
     ],
   },
   {
@@ -56,6 +84,14 @@ export const workHistory = [
           "Reporting to the Director of User Experience, developed app mockups and prototypes. Coded and tested email campaigns.",
       },
     ],
+    skills: [
+      "HTML/HAML",
+      "CSS/SASS",
+      "JavaScript",
+      "JQuery",
+      "Middleman",
+      "Rails",
+    ],
   },
   {
     years: "2015",
@@ -69,5 +105,6 @@ export const workHistory = [
           "Taught a 2-week web development program on Ruby, Ruby on Rails, HTML, CSS, JQuery, Bootstrap, APIs, RESTful apps, and database modeling associations.",
       },
     ],
+    skills: ["Rails", "JQuery", "Bootstrap", "SQLite"],
   },
 ];

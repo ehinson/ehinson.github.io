@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { workHistory } from "../data/work";
 
 import { slideUpAndFadeIn } from "./animations";
+import ResumePDF from "./ResumePDF";
 
 const StyledResume = styled.div`
   position: absolute;
@@ -57,10 +58,16 @@ const StyledH2 = styled.h2`
   letter-spacing: 0;
   font-style: italic;
   font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s;
 
   span {
     border-top: 1px solid black;
     padding: 1rem 0 1rem;
+  }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.55);
   }
 `;
 
@@ -74,6 +81,7 @@ const StyledResumeBody = styled.div`
   z-index: 201;
   padding: 2rem 3rem 0 2rem;
   overflow: scroll;
+  position: "relative";
 `;
 
 const Work = styled.div`
@@ -99,81 +107,48 @@ const WorkList = styled.ul`
   }
 `;
 
-function Resume({ isResumeOpen }) {
-  const [workList, setActiveWorkList] = useState(null);
-  const [activeSections, setActiveSection] = useState({
-    skills: false,
-    work: false,
-  });
-
-  const handleOpenSections = (name) => {
-    console.log("hi");
-    const newState = {
-      ...activeSections,
-      [name]: !activeSections[name],
-    };
-
-    console.log(newState, activeSections[name]);
-    setActiveSection(newState);
-  };
+function Resume({ isExperienceOpen }) {
   return (
-    <StyledResume isOpen={isResumeOpen}>
+    <StyledResume isOpen={isExperienceOpen}>
       <StyledResumeHeader>
         <StyledHinson>Hinson</StyledHinson>
       </StyledResumeHeader>
       <StyledResumeBody>
-        <p>
-          {workList &&
-            Object.keys(workList).length > 0 &&
-            workList.detail[0].description}
-        </p>
         <Work>
-          <StyledH2 onClick={() => handleOpenSections("work")}>
-            <span>Work</span>
-            <br />
-            Experience
+          <StyledH2>
+            <span>Summary</span>
           </StyledH2>
-          {/* <a type="application/pdf" href="../pdf/EHinsonResume2020.pdf">
-            Download full resume
-          </a> */}
-          {activeSections.work && (
-            <>
-              {workHistory.map((workItem) => (
-                <WorkList
-                  key={workItem.employer}
-                  onClick={() => setActiveWorkList(workItem)}
-                >
-                  <li>{workItem.years}</li>
-                  <li>
-                    <b>{workItem.employer}</b>
-                  </li>
-                  <li>{workItem.title}</li>
-                </WorkList>
-              ))}
-            </>
-          )}
+          <p>
+            I'm a Full-stack Engineer with a front-end focus, offering extensive
+            experience building software in both onsite and remote team
+            environments. I have strong SaaS experience with an eye for design,
+            and exceptional mindfulness for scalability, code quality and user
+            experience. Excellent reputation as a team leader, collaborator, and
+            web developer, with passion for taking on complex problems and
+            helping drive solutions that positively impact both the products and
+            people involved.
+          </p>
         </Work>
         <Work>
-          <StyledH2 onClick={() => handleOpenSections("skills")}>
+          <StyledH2>
             <span>Skills</span>
           </StyledH2>
-          {activeSections.skills && (
-            <>
-              <WorkList>
-                <li>JavaScript / ES6+ / Webpack / Node / React / Redux</li>
-              </WorkList>
-              <WorkList>
-                <li>CSS-in-JS libraries (Styled Components, Emotion)</li>
-              </WorkList>
-              <WorkList>
-                <li>PostgreSQL / MongoDB</li>
-              </WorkList>
-              <WorkList>
-                <li>Flask / Ruby On Rails</li>
-              </WorkList>
-            </>
-          )}
+          <>
+            <WorkList>
+              <li>JavaScript / ES6+ / Webpack / Node / React / Redux</li>
+            </WorkList>
+            <WorkList>
+              <li>CSS-in-JS libraries (Styled Components, Emotion)</li>
+            </WorkList>
+            <WorkList>
+              <li>PostgreSQL / MongoDB</li>
+            </WorkList>
+            <WorkList>
+              <li>Flask / Ruby On Rails</li>
+            </WorkList>
+          </>
         </Work>
+        <ResumePDF />
       </StyledResumeBody>
     </StyledResume>
   );

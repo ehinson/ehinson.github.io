@@ -6,6 +6,7 @@ import { Normalize } from "styled-normalize";
 import Header from "./components/Header";
 import Stage from "./components/Stage";
 import Resume from "./components/Resume";
+import ResumePDF from "./components/ResumePDF";
 import Menu from "./components/Menu";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
@@ -39,9 +40,10 @@ const StyledApp = styled.div`
 function App() {
   const [isOpen, setIsOpen] = useState(null);
   const [menuIsOpen, setMenuOpen] = useState(false);
+  const [isExperienceOpen, setIsExperienceOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
-  const handleItemClick = item => {
+  const handleItemClick = (item) => {
     if (isOpen === item) {
       setIsOpen(null);
     } else {
@@ -52,11 +54,19 @@ function App() {
   const handleResumeClick = () => {
     setMenuOpen(false);
     setIsResumeOpen(true);
+    setIsExperienceOpen(false);
+  };
+
+  const handleExperienceClick = () => {
+    setMenuOpen(false);
+    setIsResumeOpen(false);
+    setIsExperienceOpen(true);
   };
 
   const handleHomeClick = () => {
     setMenuOpen(false);
     setIsResumeOpen(false);
+    setIsExperienceOpen(false);
   };
   return (
     <StyledApp>
@@ -68,8 +78,10 @@ function App() {
         menuIsOpen={menuIsOpen}
         handleHomeClick={handleHomeClick}
         handleResumeClick={handleResumeClick}
+        handleExperienceClick={handleExperienceClick}
       />
-      <Resume isResumeOpen={isResumeOpen} />
+      <Resume isExperienceOpen={isExperienceOpen} />
+      {/* <ResumePDF isResumeOpen={isResumeOpen} /> */}
     </StyledApp>
   );
 }
