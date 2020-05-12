@@ -213,25 +213,6 @@ const Work = styled.div`
   flex-direction: column;
 `;
 
-const WorkList = styled.ul`
-  list-style-type: none;
-  padding-inline-start: 0;
-
-  li:nth-child(1) {
-    font-size: 0.8rem;
-  }
-
-  li:nth-child(2) {
-    color: darkgray;
-    font-size: 0.8rem;
-    padding: 0.2rem 0;
-  }
-
-  li:nth-child(3) {
-    font-size: 1.2rem;
-  }
-`;
-
 function Header({ handleItemClick, isOpen }) {
   return (
     <StyledStage>
