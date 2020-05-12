@@ -6,7 +6,6 @@ import { Normalize } from "styled-normalize";
 import Header from "./components/Header";
 import Stage from "./components/Stage";
 import Resume from "./components/Resume";
-import ResumePDF from "./components/ResumePDF";
 import Menu from "./components/Menu";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
@@ -81,7 +80,6 @@ function App() {
         handleExperienceClick={handleExperienceClick}
       />
       <Resume isExperienceOpen={isExperienceOpen} />
-      {/* <ResumePDF isResumeOpen={isResumeOpen} /> */}
     </StyledApp>
   );
 }

@@ -1,8 +1,4 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import { PDFDownloadLink, Document, Page } from "@react-pdf/renderer";
-
-import ResumePDF from "./ResumePDF";
 
 import { slideLeftAndFadeIn } from "./animations";
 
@@ -93,19 +89,9 @@ function Menu({
             Say Hi.
           </a>
         </div>
-        <button type="button" onClick={handleResumeClick}>
-          Resume
-        </button>
         <button type="button" onClick={handleExperienceClick}>
           Resume
         </button>
-        {/* <div>
-          <PDFDownloadLink document={<ResumePDF />} fileName="erinqhinson.pdf">
-            {({ blob, url, loading, error }) =>
-              loading ? "Loading document..." : "Download now!"
-            }
-          </PDFDownloadLink>
-        </div> */}
       </StyledMenuContent>
     </StyledMenuOverlay>
   );

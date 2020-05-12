@@ -1,52 +1,15 @@
 import React from "react";
-import styled, { css } from "styled-components";
 import { workHistory } from "../data/work";
 
-import { slideUpAndFadeIn } from "./animations";
-import ReactPDF, {
+import {
   Page,
   Text,
   View,
   Document,
   StyleSheet,
   Font,
-  Image,
   PDFViewer,
-  render,
 } from "@react-pdf/renderer";
-
-// const Container = styled.div`
-//   position: absolute;
-//   background: antiquewhite;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   overflow: hidden;
-//   transition: all 0.3s;
-//   transform: translateY(100%);
-//   opacity: 0;
-//   display: grid;
-//   grid-template-columns: 45% 55%;
-//   grid-template-rows: 100%;
-//   grid-template-areas: "resumeHeader resumeBody";
-//   ${(p) =>
-//     p.isOpen &&
-//     css`
-//       transform: translateY(0);
-//       opacity: 1;
-//       z-index: 190;
-//       animation: ${slideUpAndFadeIn} 0.3s;
-//     `}
-
-//   @media screen and (max-width: 1024px) {
-//     grid-template-columns: 100%;
-//     grid-template-rows: 10em 1fr;
-//     grid-template-areas:
-//       "resumeHeader"
-//       "resumeBody";
-//   }
-// `;
 
 Font.register({
   family: "Playfair Display",
@@ -63,22 +26,82 @@ Font.register({
 const styles = StyleSheet.create({
   page: {
     background: "white",
-    padding: "10pt",
+    padding: "32pt 16pt",
     overflow: "scroll",
     display: "flex",
     flexDirection: "column",
   },
   header: {
     fontSize: "30pt",
-    fontWeight: "bold",
-    color: "red",
+    padding: "10pt 0 0",
     fontFamily: "Playfair Display",
+    borderTop: "1pt solid black",
+    maxWidth: "200pt",
+  },
+  subheader: {
+    fontSize: "20pt",
+    padding: "10pt 0 0",
+    fontFamily: "Playfair Display",
+    display: "inline",
+  },
+  email: {
+    fontSize: "11pt",
+    lineHeight: "1",
+    color: "#838383",
+    fontFamily: "Montserrat",
+    textTransform: "uppercase",
+    letterSpacing: "1.1pt",
+    padding: "4pt 0 16pt",
+    borderBottom: "1pt solid black",
+    maxWidth: "200pt",
+    marginBottom: "30pt",
   },
   contact: {
-    fontSize: "10pt",
-    color: "gray",
-    padding: "10pt",
+    fontSize: "11pt",
+    lineHeight: "1",
+    color: "#838383",
     fontFamily: "Montserrat",
+    textTransform: "uppercase",
+    letterSpacing: "1.1pt",
+    padding: "4pt 0 0",
+  },
+  year: {
+    fontSize: "11pt",
+    lineHeight: "1",
+    color: "#000000",
+    fontFamily: "Montserrat",
+    textTransform: "uppercase",
+    letterSpacing: "1.2pt",
+    margin: "4pt 0 0",
+  },
+  text: {
+    fontSize: "13pt",
+    lineHeight: "1.25",
+    color: "#000000",
+    fontFamily: "Montserrat",
+    padding: "4pt 0 0",
+  },
+  title: {
+    fontSize: "15pt",
+    lineHeight: "1",
+    color: "#000000",
+    fontFamily: "Montserrat",
+    padding: "8pt 0 0",
+    textTransform: "uppercase",
+    fontWeight: "bold",
+  },
+  subtitle: {
+    fontSize: "13pt",
+    lineHeight: "1",
+    color: "#000000",
+    fontFamily: "Montserrat",
+    margin: "12pt 0 0",
+    textTransform: "uppercase",
+    fontWeight: "bold",
+    minWidth: "100%",
+  },
+  view: {
+    marginTop: "12pt",
   },
 });
 
@@ -92,124 +115,57 @@ const ResumeDocument = () => (
       <Text style={styles.contact} fixed>
         720-448-5176
       </Text>
-      <Text style={styles.contact} fixed>
+      <Text style={styles.email} fixed>
         erinqhinson@gmail.com
       </Text>
+      <Text style={styles.subheader}>Summary</Text>
+      <Text style={styles.text}>
+        I'm a Full-stack Engineer with a front-end focus, offering extensive
+        experience building software in both onsite and remote team
+        environments. I have strong SaaS experience with an eye for design, and
+        exceptional mindfulness for scalability, code quality and user
+        experience. Excellent reputation as a team leader, collaborator, and web
+        developer, with passion for taking on complex problems and helping drive
+        solutions that positively impact both the products and people involved.
+      </Text>
+      <Text style={styles.subheader}>Experience</Text>
       {workHistory.map((workItem) => (
-        <View key={workItem.employer}>
-          <Text>{workItem.years}</Text>
-          <Text>{workItem.employer}</Text>
-          <Text>{workItem.title}</Text>
-          <Text>
+        <View style={styles.view} key={workItem.employer}>
+          <Text style={styles.year}>{workItem.years}</Text>
+          <Text style={styles.contact}>{workItem.employer}</Text>
+          <Text style={styles.title}>{workItem.title}</Text>
+          <View>
             {workItem.detail.map((detail) => (
-              <View key={detail.title}>
+              <View wrap={false} key={detail.title}>
                 {workItem.detail.length > 1 && (
                   <>
-                    <Text>{detail.title}</Text>
-                    <Text>{detail.year}</Text>
+                    <Text style={styles.subtitle}>{detail.title}</Text>
+                    <Text style={styles.year}>{detail.year}</Text>
                   </>
                 )}
-                <Text>{detail.description}</Text>
+                <Text style={styles.text}>{detail.description}</Text>
               </View>
             ))}
-          </Text>
-          <Text>
-            Tech Stack:
-            {workItem.skills.join(", ")}
+          </View>
+          <Text style={[styles.text, { color: "#838383" }]}>
+            Tech Stack: {workItem.skills.join(", ")}
           </Text>
         </View>
       ))}
+      <Text style={styles.subheader}>Education</Text>
+      <Text style={styles.contact}>2014</Text>
+      <Text style={styles.year}>
+        Tech Talent South -- Ruby on Rails Bootcamp
+      </Text>
     </Page>
   </Document>
 );
-
-// const ResumePDF = (props) => {
-//   return (
-//     <Document>
-//       <Page size="A4">
-//         <View>
-//           <Text>My document data</Text>
-//         </View>
-//       </Page>
-//     </Document>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   body: {
-//     position: "absolute",
-//     background: "antiquewhite",
-//     top: "0",
-//     left: "0",
-//     height: "100%",
-//     width: "100%",
-//     overflow: "hidden",
-//     transition: "all 0.3s",
-//     display: "grid",
-//     gridTemplateColumns: "45% 55%",
-//     gridTemplateRows: "100%",
-//     gridTemplateAreas: '"resumeHeader resumeBody"',
-//   },
-//   page: {
-//     background: "white",
-//     gridArea: "resumeBody",
-//     padding: "2rem 3rem 2rem 2rem",
-//     overflow: "scroll",
-//     display: "flex",
-//     flexDirection: "column",
-//   },
-//   years: {
-//     fontSize: "0.8rem",
-//     margin: "1.2rem 0 0.5rem",
-//   },
-//   position: {
-//     fontSize: "1.2rem",
-//     fontWeight: "bold",
-//   },
-//   employer: {
-//     fontSize: "0.8rem",
-//     color: "darkgray",
-//     padding: "0.5rem 0",
-//   },
-//   work: {
-//     display: "flex",
-//     flexDirection: "column",
-//     marginTop: "15px",
-//   },
-//   header: {
-//     fontSize: "2.5rem",
-//     letterSpacing: "0",
-//     fontWeight: "900",
-//     fontFamily: "Playfair Display",
-//     cursor: "pointer",
-//     transition: "all 0.3s",
-//   },
-//   contact: {
-//     fontSize: "0.8rem",
-//     color: "darkgray",
-//     padding: "0.5rem 0 0",
-//   },
-//   description: {
-//     fontSize: "1rem",
-//   },
-//   skills: {
-//     fontSize: "0.8rem",
-//     fontWeight: "bold",
-//     textTransform: "uppercase",
-//     margin: "1.5rem 0 0",
-//   },
-//   subPosition: {
-//     fontSize: "0.8rem",
-//     fontWeight: "bold",
-//   },
-// });
 
 const ResumePDF = () => (
   <PDFViewer
     style={{
       position: "relative",
       width: "100%",
-      // background: "antiquewhite",
       top: "0",
       left: "0",
       height: "100%",
