@@ -1,6 +1,6 @@
 {
   "name": "eqhinson",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Erin Hinson's personal website",
   "keywords": [],
   "main": "src/index.js",
@@ -23,7 +23,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "browserslist": [
     ">0.2%",
