@@ -14,13 +14,13 @@ import {
 Font.register({
   family: "Playfair Display",
   src:
-    "http://fonts.gstatic.com/s/playfairdisplay/v20/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_gGUXtHA_H-oE0o.ttf",
+    "https://fonts.gstatic.com/s/playfairdisplay/v20/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_gGUXtHA_H-oE0o.ttf",
 });
 
 Font.register({
   family: "Montserrat",
   src:
-    "http://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhziTh89Y.ttf",
+    "https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhziTh89Y.ttf",
 });
 
 const styles = StyleSheet.create({
