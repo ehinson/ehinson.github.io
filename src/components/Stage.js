@@ -40,6 +40,10 @@ const StyledStageTop = styled.div`
   justify-content: space-between;
   align-items: center;
   color: white;
+
+  @media screen and (max-width: 1024px) {
+    justify-content: flex-start;
+  }
 `;
 
 const StyledStageContent = styled.div`
@@ -48,15 +52,17 @@ const StyledStageContent = styled.div`
   top: 0;
   left: 0;
   bottom: 100px;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   width: 100%;
   z-index: 4;
   transition-delay: 0.3s;
   transition: all 0.3s;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+  padding-top: 100px;
 
   ${(p) =>
     p.isOpen &&
@@ -85,8 +91,23 @@ const StyledStageContent = styled.div`
     }
   }
 
+  @media screen and (max-width: 1250px) {
+    > div {
+      max-width: 85%;
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     height: 100%;
+    padding-top: 65px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-top: 35px;
+
+    > div {
+      max-width: 85%;
+    }
   }
 `;
 
@@ -198,7 +219,6 @@ const StyledH2 = styled.h2`
   letter-spacing: 0;
   font-style: italic;
   font-weight: 900;
-  cursor: pointer;
   transition: all 0.3s;
 
   span {
@@ -249,10 +269,13 @@ function Header({ handleItemClick, isOpen }) {
               extensive experience building software in both onsite and remote
               team environments. I have strong SaaS experience with an eye for
               design, and exceptional mindfulness for scalability, code quality
-              and user experience. Excellent reputation as a team leader,
-              collaborator, and web developer, with passion for taking on
-              complex problems and helping drive solutions that positively
-              impact both the products and people involved.
+              and user experience.{" "}
+              <span>
+                Excellent reputation as a team leader, collaborator, and web
+                developer, with passion for taking on complex problems and
+                helping drive solutions that positively impact both the products
+                and people involved.
+              </span>
               <br />
               <br />
               Trivia Nerd.

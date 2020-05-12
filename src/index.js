@@ -11,7 +11,8 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 
 const StyledApp = styled.div`
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1rem;
   overflow: hidden;
@@ -24,10 +25,11 @@ const StyledApp = styled.div`
     "header stage"
     "content stage"
     "footer stage";
+
   @media screen and (max-width: 1024px) {
     height: 100%;
     grid-template-columns: 100%;
-    grid-template-rows: 100px 40% 100px 500px;
+    grid-template-rows: 100px 35% 100px 900px;
     grid-template-areas:
       "header"
       "content"
